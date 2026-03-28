@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CrowdFundJS — Discover Campaigns</title>
+  <link rel="stylesheet" href="../Styles/index.css">
+</head>
+<body>
+  <header>
+    <div class="logo">CrowdFund<span>JS</span></div>
+    <nav id="navbar"></nav>
+  </header>
+
+  <div class="container">
+    <h1 class="page-title">Discover Campaigns</h1>
+    <p class="page-subtitle">Back ideas that matter to you</p>
+
+    <!-- Search & Category Filter -->
+    <div class="filters">
+      <input type="text" id="search-input" placeholder="🔍  Search campaigns…">
+      <select id="category-filter">
+        <option value="">All Categories</option>
+        <option value="Technology">Technology</option>
+        <option value="Environment">Environment</option>
+        <option value="Arts">Arts &amp; Culture</option>
+        <option value="Health">Health</option>
+        <option value="Education">Education</option>
+      </select>
+    </div>
+
+    <!-- Campaign Cards Grid -->
+    <div id="campaigns-grid" class="card-grid"></div>
+
+    <!-- My Activity (visible only to logged-in non-admin users) -->
+    <div id="my-activity" class="hidden">
+      <h2>My Campaigns</h2>
+      <div id="my-campaigns-list"></div>
+    </div>
+  </div>
+
+  <!-- ── Campaign Detail Modal ───────────────────────────────────────────── -->
+  <div id="detail-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal()">×</button>
+      <div id="modal-image"></div>
+      <h2 id="modal-title"></h2>
+      <p id="modal-desc"></p>
+      <div class="progress-bar">
+        <div id="modal-progress" class="progress-fill"></div>
+      </div>
+      <div style="display:flex; justify-content:space-between; margin-top:.25rem;">
+        <span id="modal-raised"></span>
+        <span id="modal-deadline"></span>
+      </div>
+      <div id="modal-actions" style="margin-top:1.75rem;"></div>
+    </div>
+  </div>
+
+  <!-- ── Pledge Modal ────────────────────────────────────────────────────── -->
+  <div id="pledge-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closePledgeModal()">×</button>
+      <h2 id="pledge-title" style="margin-bottom:1.5rem;"></h2>
+      <div class="form-group">
+        <label for="pledge-amount">Pledge Amount ($)</label>
+        <input type="number" id="pledge-amount" min="5" placeholder="Minimum $5">
+      </div>
+      <button onclick="makePledge()" class="btn btn-primary" style="width:100%;padding:.9rem;">
+        💳 Confirm Pledge (Mock Payment)
+      </button>
+    </div>
+  </div>
+
+  <script src="../Scripts/index.js"></script>
+</body>
+</html>

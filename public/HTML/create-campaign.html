@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Campaign — CrowdFundJS</title>
+  <link rel="stylesheet" href="../Styles/create-campaign.css">
+</head>
+<body>
+  <header>
+    <div class="logo">CrowdFund<span>JS</span></div>
+    <nav id="navbar"></nav>
+  </header>
+
+  <div class="container">
+    <h1>Launch a New Campaign</h1>
+    <p style="color:var(--text-muted);margin-bottom:2rem;font-size:.95rem;">
+      Fill in the details below. Your campaign will go live after admin approval.
+    </p>
+
+    <div class="form-card">
+      <form id="create-form" novalidate>
+
+        <div class="form-group">
+          <label for="title">Campaign Title</label>
+          <input type="text" id="title" placeholder="e.g. Smart Solar Lantern" required>
+        </div>
+
+        <div class="form-group">
+          <label for="desc">Description</label>
+          <textarea id="desc" rows="5" placeholder="Describe your campaign goal and how funds will be used…" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="goal">Funding Goal ($)</label>
+          <input type="number" id="goal" placeholder="e.g. 5000" min="100" required>
+        </div>
+
+        <div class="form-group">
+          <label for="deadline">Deadline</label>
+          <input type="text" id="deadline" placeholder="DD-MM-YYYY (e.g. 31-12-2026)" required>
+          <p class="hint">Format: day-month-year, e.g. 31-12-2026</p>
+        </div>
+
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" required>
+            <option value="Technology">Technology</option>
+            <option value="Environment">Environment</option>
+            <option value="Arts">Arts &amp; Culture</option>
+            <option value="Health">Health</option>
+            <option value="Education">Education</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="image">Campaign Image (optional)</label>
+          <input type="file" id="image" accept="image/*">
+          <p class="hint">Recommended: 1200×630px. Images are stored as Base64.</p>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-submit">🚀 Launch Campaign</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="../Scripts/campaign.js"></script>
+</body>
+</html>

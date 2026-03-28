@@ -1,0 +1,79 @@
+@import url('base.css');
+
+.container {
+  max-width: 720px;
+}
+
+.container h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.form-card {
+  background: var(--surface);
+  padding: 2.5rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.form-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+textarea {
+  resize: vertical;
+  min-height: 130px;
+}
+
+input[type="file"] {
+  padding: 0.6rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  background: var(--primary-light);
+  border: 1px solid var(--primary);
+  color: var(--primary-dark);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.8rem;
+  cursor: pointer;
+  margin-right: 0.75rem;
+  transition: background var(--transition);
+}
+
+input[type="file"]::-webkit-file-upload-button:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.02em;
+  margin-top: 0.5rem;
+}
+
+
+.hint {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 0.35rem;
+}
+
+@media (max-width: 600px) {
+  .form-card { padding: 1.75rem 1.25rem; }
+}

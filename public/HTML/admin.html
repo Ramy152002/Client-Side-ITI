@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — CrowdFundJS</title>
+  <link rel="stylesheet" href="../Styles/admin.css">
+</head>
+<body>
+  <header>
+    <div class="logo">CrowdFund<span>JS</span></div>
+    <nav id="navbar"></nav>
+  </header>
+
+  <div class="container">
+    <h1>Admin Dashboard</h1>
+
+    <!-- Tab switcher -->
+    <div class="tab-bar">
+      <button onclick="switchTab(0)" class="btn" id="tab-users">👥 Users</button>
+      <button onclick="switchTab(1)" class="btn" id="tab-campaigns">📋 Campaigns</button>
+    </div>
+
+    <!-- Users Table -->
+    <div id="users-tab">
+      <div class="table-wrapper">
+        <table id="users-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Campaigns Table -->
+    <div id="campaigns-tab" class="hidden">
+      <div class="table-wrapper">
+        <table id="campaigns-table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Creator</th>
+              <th>Goal</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <script src="../Scripts/admin.js"></script>
+</body>
+</html>

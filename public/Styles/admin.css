@@ -1,0 +1,78 @@
+
+@import url('base.css');
+
+.container h1 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+
+
+.tab-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.tab-bar .btn {
+  background: var(--surface);
+  border: 2px solid var(--border);
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  transition: all var(--transition);
+}
+
+.tab-bar .btn:hover,
+.tab-bar .btn.active-tab {
+  background: var(--dark);
+  color: #fff;
+  border-color: var(--dark);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+
+thead tr { background: var(--dark); }
+
+th {
+  color: #fff;
+  padding: 1rem 1.25rem;
+  text-align: left;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+}
+
+td {
+  padding: 0.9rem 1.25rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9rem;
+  color: var(--text);
+  vertical-align: middle;
+}
+
+tbody tr:last-child td { border-bottom: none; }
+
+tbody tr:hover { background: var(--surface-alt); }
+
+td .btn {
+  font-size: 0.78rem;
+  padding: 0.4rem 0.8rem;
+  margin-right: 0.4rem;
+  border-radius: var(--radius-sm);
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}

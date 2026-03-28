@@ -1,0 +1,15 @@
+{
+  "users": [
+    {"id":1,"name":"Admin User","role":"admin","isActive":true,"email":"admin@crowd.com","password":"admin123"},
+    {"id":2,"name":"Jane Doe","role":"user","isActive":true,"email":"jane@example.com","password":"user123"},
+    {"id":3,"name":"John Smith","role":"user","isActive":true,"email":"john@example.com","password":"user123"}
+  ],
+  "campaigns": [
+    {"id":1,"title":"Smart Watch Innovation","description":"Help us bring this revolutionary smart watch to market!","creatorId":2,"goal":5000,"deadline":"31-12-2026","isApproved":true,"category":"Technology","image":""},
+    {"id":2,"title":"Eco-Friendly Bags","description":"Sustainable bags for a better planet.","creatorId":3,"goal":2000,"deadline":"15-05-2026","isApproved":false,"category":"Environment","image":""}
+  ],
+  "pledges": [
+    {"id":1,"campaignId":1,"userId":3,"amount":100},
+    {"id":2,"campaignId":1,"userId":2,"amount":50}
+  ]
+}

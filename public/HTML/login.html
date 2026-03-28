@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — CrowdFundJS</title>
+  <link rel="stylesheet" href="../Styles/login.css">
+</head>
+<body>
+  <header>
+    <div class="logo">CrowdFund<span>JS</span></div>
+    <nav id="navbar"></nav>
+  </header>
+
+  <div class="container">
+    <div class="auth-box">
+      <h2>Welcome Back</h2>
+      <p class="auth-subtitle">Login to manage your campaigns</p>
+
+      <form id="login-form" novalidate>
+        <div class="form-group">
+          <label for="login-email">Email</label>
+          <input type="email" id="login-email" placeholder="jane@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="Your password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+
+      <p class="auth-footer">No account? <a href="registration.html">Register for free</a></p>
+    </div>
+  </div>
+
+  <!-- bcrypt browser library (dcodeIO/bcrypt.js) — MUST load before login.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bcryptjs@2.4.3/dist/bcrypt.min.js"></script>
+  <script src="../Scripts/login.js"></script>
+</body>
+</html>

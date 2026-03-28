@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register — CrowdFundJS</title>
+  <link rel="stylesheet" href="../Styles/registeration.css">
+</head>
+<body>
+  <header>
+    <div class="logo">CrowdFund<span>JS</span></div>
+    <nav id="navbar"></nav>
+  </header>
+
+  <div class="container">
+    <div class="auth-box">
+      <h2>Create Account</h2>
+      <p class="auth-subtitle">Join thousands funding great ideas</p>
+
+      <form id="register-form" novalidate>
+        <div class="form-group">
+          <label for="reg-name">Full Name</label>
+          <input type="text" id="reg-name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="reg-email">Email</label>
+          <input type="email" id="reg-email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="reg-password">Password</label>
+          <input type="password" id="reg-password" placeholder="Enter your password" required>
+          <p class="hint">Minimum 6 characters. Your password is stored securely.</p>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Account</button>
+      </form>
+
+      <p class="auth-footer">Already have an account? <a href="login.html">Login</a></p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bcryptjs@2.4.3/dist/bcrypt.min.js"></script>
+  <script src="../Scripts/registeration.js"></script>
+</body>
+</html>
